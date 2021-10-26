@@ -31,5 +31,3 @@ int main()
   if(fall!=1){
   printf("True");
   }
-}
-/
