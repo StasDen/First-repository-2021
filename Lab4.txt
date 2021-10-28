@@ -1,0 +1,74 @@
+#include "main.h"
+
+int main() {
+    Bank Privatbank("Privatbank", 120, 58, 123, "456");
+        cout << Privatbank.getName() << endl;
+        cout << Privatbank.getName1() << endl;
+        cout << Privatbank.getName2() << endl;
+        cout << Privatbank.getName3() << endl;
+        cout << Privatbank.getName4() << endl;
+   
+    Bank Monobank("Monobank", 150, 29, 789, "101112");
+        cout << Monobank.getName() << endl;
+        cout << Monobank.getName1() << endl;
+        cout << Monobank.getName2() << endl;
+        cout << Monobank.getName3() << endl;
+        cout << Monobank.getName4() << endl;
+   
+    Bank Credobank("Credobank", 97, 43, 131415, "161718");
+        cout << Credobank.getName() << endl;
+        cout << Credobank.getName1() << endl;
+        cout << Credobank.getName2() << endl;
+        cout << Credobank.getName3() << endl;
+        cout << Credobank.getName4() << endl;
+}
+
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+class Bank {
+    private:
+        string name;
+        int number_of_customers;
+        int number_of_loans;
+    protected:
+        int x;
+        string y;
+    public:
+        Bank() {
+            x = 7;
+            y = "I'm protected";
+            name = "monoPrivatBank";
+            number_of_customers = 5000;
+            number_of_loans = 2558;
+        }
+       
+        Bank(string nam, int number_of_customer, int number_of_loan, int z, string n) {
+            name = nam;
+            number_of_customers = number_of_customer;
+            number_of_loans = number_of_loan;
+            x = z;
+            y = n;
+        }
+       
+        ~ Bank() {
+            cout << "Destruction!";
+        }
+        string getName() {
+            return name;
+        }
+        int getName1() {
+            return number_of_customers;
+        }
+        int getName2() {
+            return number_of_loans;
+        }
+         int getName3() {
+            return x;
+         }
+          string getName4() {
+            return y;
+          }
+};
